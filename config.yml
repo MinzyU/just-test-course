@@ -1,0 +1,16 @@
+title: Just test
+description: Just a test
+template:
+  repo: just-test-template
+  name: just-test
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
